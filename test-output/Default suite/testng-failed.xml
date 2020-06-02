@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2E.copart.ValidateTitle">
+      <class name="cucumberOptions.TestRunner">
         <methods>
-          <include name="intial"/>
-          <include name="ValidateNavBar"/>
-          <include name="teardown"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- E2E.copart.ValidateTitle -->
+      </class> <!-- cucumberOptions.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
