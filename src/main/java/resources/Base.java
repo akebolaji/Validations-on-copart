@@ -14,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 	
@@ -33,7 +34,8 @@ public WebDriver initializeBrowser() throws IOException {
 		
 	}
 	else if(browserName.equals("firefox")) {
-		
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Ake\\Downloads\\geckodriver-master\\geckodriver-master.exe");
+		 driver = new FirefoxDriver();
 	}
 	else if(browserName.equals("IE")) {
 		

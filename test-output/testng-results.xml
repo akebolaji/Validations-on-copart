@@ -1,40 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="0" failed="0" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-01T19:01:10 PDT" name="Suite" finished-at="2020-06-01T19:01:46 PDT" duration-ms="35572">
+  <suite started-at="2020-06-06T07:16:02 PDT" name="Suite" finished-at="2020-06-06T07:16:03 PDT" duration-ms="524">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@5c86dbc5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-06-01T19:01:10 PDT" name="Validating User Login" finished-at="2020-06-01T19:01:46 PDT" duration-ms="35572">
-      <class name="cucumberOptions.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@5c86dbc5]" started-at="2020-06-01T19:01:10 PDT" name="setUpClass" finished-at="2020-06-01T19:01:11 PDT" duration-ms="378" status="PASS">
+    <test started-at="2020-06-06T07:16:02 PDT" name="App Test" finished-at="2020-06-06T07:16:02 PDT" duration-ms="37">
+    </test> <!-- App Test -->
+    <test started-at="2020-06-06T07:16:02 PDT" name="Validating Logo" finished-at="2020-06-06T07:16:03 PDT" duration-ms="458">
+      <class name="E2E.copart.ValidateLogo">
+        <test-method is-config="true" signature="intialize()[pri:0, instance:E2E.copart.ValidateLogo@6b54655f]" started-at="2020-06-06T07:16:02 PDT" name="intialize" finished-at="2020-06-06T07:16:02 PDT" duration-ms="226" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.ValidateLogo.intialize(ValidateLogo.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@5c86dbc5]" started-at="2020-06-01T19:01:11 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-06-01T19:01:46 PDT" duration-ms="35119" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Positive test validating login"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login into Application"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- intialize -->
+        <test-method signature="iconIsDisplayed()[pri:0, instance:E2E.copart.ValidateLogo@6b54655f]" started-at="2020-06-06T07:16:03 PDT" name="iconIsDisplayed" finished-at="2020-06-06T07:16:03 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.ValidateLogo.intialize(ValidateLogo.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@5c86dbc5]" started-at="2020-06-01T19:01:46 PDT" name="tearDownClass" finished-at="2020-06-01T19:01:46 PDT" duration-ms="4" status="PASS">
+        </test-method> <!-- iconIsDisplayed -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:E2E.copart.ValidateLogo@6b54655f]" started-at="2020-06-06T07:16:03 PDT" name="teardown" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1591452963096" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumberOptions.TestRunner -->
-    </test> <!-- Validating User Login -->
+        </test-method> <!-- teardown -->
+      </class> <!-- E2E.copart.ValidateLogo -->
+    </test> <!-- Validating Logo -->
+    <test started-at="2020-06-06T07:16:02 PDT" name="Validating user Login" finished-at="2020-06-06T07:16:03 PDT" duration-ms="524">
+      <class name="E2E.copart.HomePage">
+        <test-method is-config="true" signature="intial()[pri:0, instance:E2E.copart.HomePage@18a3962d]" started-at="2020-06-06T07:16:02 PDT" name="intial" finished-at="2020-06-06T07:16:02 PDT" duration-ms="230" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.HomePage.intial(HomePage.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intial -->
+        <test-method signature="intialize(java.lang.String, java.lang.String)[pri:0, instance:E2E.copart.HomePage@18a3962d]" started-at="2020-06-06T07:16:03 PDT" name="intialize" data-provider="getData" finished-at="2020-06-06T07:16:03 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.HomePage.intial(HomePage.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialize -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:E2E.copart.HomePage@18a3962d]" started-at="2020-06-06T07:16:03 PDT" name="teardown" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1591452963165" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- E2E.copart.HomePage -->
+    </test> <!-- Validating user Login -->
+    <test started-at="2020-06-06T07:16:02 PDT" name="Validating Title" finished-at="2020-06-06T07:16:03 PDT" duration-ms="481">
+      <class name="E2E.copart.ValidateTitle">
+        <test-method is-config="true" signature="intial()[pri:0, instance:E2E.copart.ValidateTitle@4b3c354a]" started-at="2020-06-06T07:16:02 PDT" name="intial" finished-at="2020-06-06T07:16:02 PDT" duration-ms="225" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intial -->
+        <test-method signature="ValidateNavBar()[pri:0, instance:E2E.copart.ValidateTitle@4b3c354a]" started-at="2020-06-06T07:16:03 PDT" name="ValidateNavBar" finished-at="2020-06-06T07:16:03 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateNavBar -->
+        <test-method signature="intialize()[pri:0, instance:E2E.copart.ValidateTitle@4b3c354a]" started-at="2020-06-06T07:16:03 PDT" name="intialize" finished-at="2020-06-06T07:16:03 PDT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
+at resources.Base.initializeBrowser(Base.java:38)
+at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+at org.testng.TestRunner.run(TestRunner.java:581)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialize -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:E2E.copart.ValidateTitle@4b3c354a]" started-at="2020-06-06T07:16:03 PDT" name="teardown" finished-at="1969-12-31T16:00:00 PST" duration-ms="-1591452963148" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- E2E.copart.ValidateTitle -->
+    </test> <!-- Validating Title -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Validating Title</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 31 18:47:24 PDT 2020</td>
+<td>Started on:</td><td>Sat Jun 06 07:16:02 PDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (226 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (481 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,36 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumberOptions.TestRunner.setUpClass()'><b>setUpClass</b><br>Test class: cucumberOptions.TestRunner</td>
-<td><div><pre>cucumber.runtime.CucumberException: No backends were found. Please make sure you have a backend module on your CLASSPATH.
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:81)
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:70)
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:66)
-	at cucumber.api.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:42)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace479459041", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace479459041'><pre>cucumber.runtime.CucumberException: No backends were found. Please make sure you have a backend module on your CLASSPATH.
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:81)
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:70)
-	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:66)
-	at cucumber.api.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:42)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:16)
+<td title='E2E.copart.ValidateTitle.intial()'><b>intial</b><br>Test class: E2E.copart.ValidateTitle</td>
+<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1837032386", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1837032386'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,35 +113,51 @@ function toggleAllBoxes() {
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+	at org.testng.TestRunner.run(TestRunner.java:581)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-	at org.testng.TestNG.runSuites(TestNG.java:1066)
-	at org.testng.TestNG.run(TestNG.java:1034)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
 <td>0</td>
-<td>cucumberOptions.TestRunner@4ee203eb</td></tr>
+<td>E2E.copart.ValidateTitle@4b3c354a</td></tr>
 <tr>
-<td title='cucumberOptions.TestRunner.tearDownClass()'><b>tearDownClass</b><br>Test class: cucumberOptions.TestRunner</td>
-<td><div><pre>java.lang.NullPointerException
-	at cucumber.api.testng.AbstractTestNGCucumberTests.tearDownClass(AbstractTestNGCucumberTests.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace166454155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace166454155'><pre>java.lang.NullPointerException
-	at cucumber.api.testng.AbstractTestNGCucumberTests.tearDownClass(AbstractTestNGCucumberTests.java:34)
+<td title='E2E.copart.ValidateLogo.intialize()'><b>intialize</b><br>Test class: E2E.copart.ValidateLogo</td>
+<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateLogo.intialize(ValidateLogo.java:21)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2018199163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2018199163'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateLogo.intialize(ValidateLogo.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -135,27 +166,38 @@ function toggleAllBoxes() {
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+	at org.testng.TestRunner.run(TestRunner.java:581)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-	at org.testng.TestNG.runSuites(TestNG.java:1066)
-	at org.testng.TestNG.run(TestNG.java:1034)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
 <td>0</td>
-<td>cucumberOptions.TestRunner@4ee203eb</td></tr>
+<td>E2E.copart.ValidateLogo@6b54655f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='E2E.copart.ValidateLogo.teardown()'><b>teardown</b><br>Test class: E2E.copart.ValidateLogo</td>
+<td></td>
+<td>-1591452963</td>
+<td>E2E.copart.ValidateLogo@6b54655f</td></tr>
+<tr>
+<td title='E2E.copart.ValidateTitle.teardown()'><b>teardown</b><br>Test class: E2E.copart.ValidateTitle</td>
+<td></td>
+<td>-1591452963</td>
+<td>E2E.copart.ValidateTitle@4b3c354a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -165,53 +207,111 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumberOptions.TestRunner.feature()'><b>feature</b><br>Test class: cucumberOptions.TestRunner<br>Test method: Runs Cucumber Feature</td>
-<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-Caused by: java.lang.NullPointerException
-	at cucumber.api.testng.AbstractTestNGCucumberTests.features(AbstractTestNGCucumberTests.java:29)
-	... 25 more
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace507911745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace507911745'><pre>java.lang.RuntimeException: java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:52)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:148)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:788)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:588)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
-	at org.testng.TestNG.runSuites(TestNG.java:1066)
-	at org.testng.TestNG.run(TestNG.java:1034)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at cucumber.api.testng.AbstractTestNGCucumberTests.features(AbstractTestNGCucumberTests.java:29)
+<td title='E2E.copart.ValidateTitle.ValidateNavBar()'><b>ValidateNavBar</b><br>Test class: E2E.copart.ValidateTitle</td>
+<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9813740", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9813740'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:79)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:48)
-	... 25 more
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
 <td>0</td>
-<td>cucumberOptions.TestRunner@4ee203eb</td></tr>
+<td>E2E.copart.ValidateTitle@4b3c354a</td></tr>
+<tr>
+<td title='E2E.copart.ValidateTitle.intialize()'><b>intialize</b><br>Test class: E2E.copart.ValidateTitle</td>
+<td><div><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace313941662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace313941662'><pre>java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Ake\Downloads\geckodriver-master\geckodriver-master.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at resources.Base.initializeBrowser(Base.java:38)
+	at E2E.copart.ValidateTitle.intial(ValidateTitle.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:620)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:610)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>E2E.copart.ValidateTitle@4b3c354a</td></tr>
 </table><p>
 </body>
 </html>
